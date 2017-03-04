@@ -12,3 +12,8 @@ var port            = process.env.PORT || 4000;
 var app             = express();
 
 mongoose.Promise = global.Promise;
+
+
+// create connection to MONGODB
+var mongoURI = process.env.MONGODB_URI || 'mongodb://localhost/dailysalah';
+mongoose.connect(mongoURI);
